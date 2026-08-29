@@ -1,0 +1,49 @@
+html { scrollbar-gutter: stable; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: #FAFAF8; -webkit-font-smoothing: antialiased; }
+a { color: #B8001F; text-decoration: none; }
+a:hover { color: #0E0E0E; }
+
+.pn-link:hover { background: #F2F1EC }
+
+@keyframes hvScroll { 0%,6% { transform: translateY(0) } 48%,58% { transform: translateY(-55.0%) } 96%,100% { transform: translateY(0) } }
+.hv2 { animation: hvScroll 20s ease-in-out infinite }
+
+@keyframes dsFadeA { 0%,57% { opacity: 1 } 60%,93% { opacity: 0 } 96%,100% { opacity: 1 } }
+@keyframes dsFadeB { 0%,57% { opacity: 0 } 60%,93% { opacity: 1 } 96%,100% { opacity: 0 } }
+@keyframes dsToastIn { 0%,24% { opacity: 0; transform: translateY(14px) } 28%,57% { opacity: 1; transform: translateY(0) } 60%,100% { opacity: 0; transform: translateY(14px) } }
+@keyframes dsTapPulse { 0%,12% { box-shadow: 0 0 0 2px rgba(228,0,43,0.55) } 18% { box-shadow: 0 0 0 6px rgba(228,0,43,0.18), 0 0 0 2px rgba(228,0,43,0.9) } 24%,100% { box-shadow: 0 0 0 2px rgba(228,0,43,0.35) } }
+.dsA { animation: dsFadeA 9s ease-in-out infinite }
+.dsB { animation: dsFadeB 9s ease-in-out infinite }
+.dsToast { animation: dsToastIn 9s ease-in-out infinite }
+.dsTap { animation: dsTapPulse 9s ease-in-out infinite }
+
+@keyframes vdScroll { 0%,5% { transform: translateY(0) } 45%,55% { transform: translateY(-68.7%) } 95%,100% { transform: translateY(0) } }
+.hv3 { animation: vdScroll 26s ease-in-out infinite }
+@keyframes vdScroll2 { 0%,4% { transform: translateY(0) } 26%,50% { transform: translateY(-33%) } 70%,80% { transform: translateY(-70.3%) } 96%,100% { transform: translateY(0) } }
+.hv4 { animation: vdScroll2 30s ease-in-out infinite }
+
+@keyframes piFadeA { 0%,50% { opacity: 1 } 53%,64% { opacity: 0 } 67%,100% { opacity: 1 } }
+@keyframes piFadeB { 0%,50% { opacity: 0 } 53%,64% { opacity: 1 } 67%,100% { opacity: 0 } }
+@keyframes piTap { 0%,38% { box-shadow: 0 0 0 2px rgba(228,0,43,0) } 43% { box-shadow: 0 0 0 6px rgba(228,0,43,0.18), 0 0 0 2px rgba(228,0,43,0.9) } 50%,100% { box-shadow: 0 0 0 2px rgba(228,0,43,0) } }
+.piA { animation: piFadeA 30s ease-in-out infinite }
+.piB { animation: piFadeB 30s ease-in-out infinite }
+
+@keyframes avF1 { 0%,12.5% { opacity: 1 } 12.9%,100% { opacity: 0 } }
+@keyframes avF2 { 0%,12.5% { opacity: 0 } 12.9%,25.0% { opacity: 1 } 25.4%,100% { opacity: 0 } }
+@keyframes avF3 { 0%,25.0% { opacity: 0 } 25.4%,37.5% { opacity: 1 } 37.9%,100% { opacity: 0 } }
+@keyframes avF4 { 0%,37.5% { opacity: 0 } 37.9%,50.0% { opacity: 1 } 50.4%,100% { opacity: 0 } }
+@keyframes avF5 { 0%,50.0% { opacity: 0 } 50.4%,62.5% { opacity: 1 } 62.9%,100% { opacity: 0 } }
+@keyframes avF6 { 0%,62.5% { opacity: 0 } 62.9%,75.0% { opacity: 1 } 75.4%,100% { opacity: 0 } }
+@keyframes avF7 { 0%,75.0% { opacity: 0 } 75.4%,87.5% { opacity: 1 } 87.9%,100% { opacity: 0 } }
+@keyframes avF8 { 0%,87.5% { opacity: 0 } 87.9%,100.0% { opacity: 1 } 100.4%,100% { opacity: 0 } }
+@keyframes vinScroll { 0%,5% { transform: translateY(0) } 55%,80% { transform: translateY(-54.3%) } 92%,100% { transform: translateY(0) } }
+.vinScroll { animation: vinScroll 24s ease-in-out infinite }
+.av1 { animation: avF1 20s linear infinite }
+.av2 { animation: avF2 20s linear infinite }
+.av3 { animation: avF3 20s linear infinite }
+.av4 { animation: avF4 20s linear infinite }
+.av5 { animation: avF5 20s linear infinite }
+.av6 { animation: avF6 20s linear infinite }
+.av7 { animation: avF7 20s linear infinite }
+.av8 { animation: avF8 20s linear infinite }

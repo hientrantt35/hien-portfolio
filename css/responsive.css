@@ -1,0 +1,95 @@
+/* Shared mobile fixes for all pages. Inline styles carry the desktop layout,
+   so overrides here need !important to win at narrow widths. */
+
+.back-to-top { opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.back-to-top.show { opacity: 1; pointer-events: auto; }
+
+@media (max-width: 760px) {
+
+  /* ---- header: stack logo row + full-width nav row ---- */
+  header {
+    flex-wrap: wrap !important;
+    row-gap: 12px !important;
+    padding: 16px 20px !important;
+  }
+  header nav {
+    width: 100% !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    font-size: 13px !important;
+  }
+  header nav a { white-space: nowrap !important; }
+
+  /* ---- generic side padding on page containers ---- */
+  section[style*="auto"],
+  div[style*="margin: 0 auto"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* ---- oversized top padding between sections ---- */
+  [style*="padding: 140px 80px 0"],
+  [style*="padding: 132px 80px 0"] { padding-top: 64px !important; }
+  [style*="padding: 120px 80px 0"] { padding-top: 56px !important; }
+  [style*="padding: 96px 80px 0"],
+  [style*="padding: 96px 0"] { padding-top: 48px !important; }
+  [style*="padding: 88px 24px 0"] { padding-top: 48px !important; }
+  [style*="padding: 72px 80px 0"] { padding-top: 40px !important; }
+  [style*="padding: 56px 24px 0"] { padding-top: 32px !important; }
+  [style*="margin: 80px auto 0"] { margin-top: 48px !important; }
+  [style*="margin-top: 132px"] { margin-top: 56px !important; }
+  [style*="margin-top: 76px"] { margin-top: 40px !important; }
+
+  /* ---- headline sizing ---- */
+  h1 { font-size: clamp(32px, 9vw, 52px) !important; }
+
+  /* ---- fixed multi-column grids that don't auto-stack: force single column ---- */
+  [style*="grid-template-columns: repeat(3, minmax(0, 1fr))"],
+  [style*="grid-template-columns: repeat(2, minmax(0, 1fr))"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: minmax(0, 1fr) minmax(240px, 380px)"],
+  [style*="grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr)"],
+  [style*="grid-template-columns: minmax(0, 1fr) minmax(0, 1fr)"],
+  [style*="grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.95fr)"],
+  [style*="grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr)"],
+  [style*="grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr)"],
+  [style*="grid-template-columns: 260px minmax(0, 1fr)"],
+  [style*="grid-template-columns: 170px minmax(0, 1fr)"],
+  [style*="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))"],
+  [style*="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))"],
+  [style*="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))"],
+  [style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---- photo-collage masonry grid (Honda hero): stack to one column ---- */
+  [style*="grid-template-columns: repeat(6, minmax(0, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+    height: auto !important;
+  }
+  [style*="grid-template-columns: repeat(6, minmax(0, 1fr))"] > div {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  /* ---- about.html hero image column: tighten its own padding ---- */
+  [style*="padding: 44px 56px 48px 0"] { padding: 8px 0 0 !important; }
+  [style*="padding: 44px 48px 48px 56px"] { padding: 32px 0 0 !important; }
+
+  /* ---- overview/info-box grids: tighten inner padding once stacked ---- */
+  [style*="padding: 52px 56px"] { padding: 28px 24px !important; }
+  [style*="padding: 44px 40px"] { padding: 24px 22px !important; }
+  [style*="padding: 40px 44px"] { padding: 24px 22px !important; }
+
+  /* ---- keep intentionally horizontal-scrolling rows scrollable, not squished ---- */
+  [style*="grid-template-columns: repeat(4, 230px)"] {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ---- fixed scroll-progress rail (left: 22px) collides with mobile content padding ---- */
+  [style*="left: 22px; top: 50%"] {
+    display: none !important;
+  }
+}

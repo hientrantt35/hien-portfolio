@@ -1,0 +1,69 @@
+html { scrollbar-gutter: stable; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: #FAFAF8; -webkit-font-smoothing: antialiased; }
+a { color: #5457D6; text-decoration: none; }
+a:hover { color: #0E0E0E; }
+
+.pn-link:hover { background: #F2F1EC }
+.theme-card:hover { box-shadow: 0 22px 44px rgba(14,14,14,0.14); transform: translateY(-4px); }
+
+@keyframes tkFade { 0%,46% { opacity: 1 } 49%,96% { opacity: 0 } 100% { opacity: 1 } }
+@keyframes tkScroll1 { 0%,6% { transform: translateY(0) } 28% { transform: translateY(-47%) } 44%,100% { transform: translateY(0) } }
+@keyframes tkScroll2 { 0%,6% { transform: translateY(0) } 28% { transform: translateY(-50%) } 44%,100% { transform: translateY(0) } }
+.tkf1, .tkf2 { animation: tkFade 20s linear infinite }
+.tk1 { animation: tkScroll1 20s ease-in-out infinite }
+.tk2 { animation: tkScroll2 20s ease-in-out infinite }
+.tkf2, .tk2 { animation-delay: -10s }
+
+@keyframes rtF1 { 0%,30% { opacity: 1 } 33%,97% { opacity: 0 } 100% { opacity: 1 } }
+@keyframes rtF2 { 0%,30% { opacity: 0 } 33%,63% { opacity: 1 } 66%,100% { opacity: 0 } }
+@keyframes rtF3 { 0%,63% { opacity: 0 } 66%,97% { opacity: 1 } 100% { opacity: 0 } }
+.rt1 { animation: rtF1 15s linear infinite }
+.rt2 { animation: rtF2 15s linear infinite }
+.rt3 { animation: rtF3 15s linear infinite }
+
+@keyframes sfF1 { 0%,31% { opacity: 1 } 33%,98% { opacity: 0 } 100% { opacity: 1 } }
+@keyframes sfF2 { 0%,31% { opacity: 0 } 33%,64% { opacity: 1 } 66%,100% { opacity: 0 } }
+@keyframes sfF3 { 0%,64% { opacity: 0 } 66%,97% { opacity: 1 } 99%,100% { opacity: 0 } }
+@keyframes sfS1 { 0%,2% { transform: translateY(0) } 31%,100% { transform: translateY(-50%) } }
+@keyframes sfS2 { 0%,35% { transform: translateY(0) } 64%,100% { transform: translateY(-50%) } }
+@keyframes sfS3 { 0%,68% { transform: translateY(0) } 97%,100% { transform: translateY(-50%) } }
+.sf1 { animation: sfF1 24s linear infinite }
+.sf2 { animation: sfF2 24s linear infinite }
+.sf3 { animation: sfF3 24s linear infinite }
+.sfs1 { animation: sfS1 24s ease-in-out infinite }
+.sfs2 { animation: sfS2 24s ease-in-out infinite }
+.sfs3 { animation: sfS3 24s ease-in-out infinite }
+
+@keyframes tbF1 { 0%,14.3% { opacity: 1 } 14.7%,100% { opacity: 0 } }
+@keyframes tbF2 { 0%,14.3% { opacity: 0 } 14.7%,28.6% { opacity: 1 } 29%,100% { opacity: 0 } }
+@keyframes tbF3 { 0%,28.6% { opacity: 0 } 29%,42.9% { opacity: 1 } 43.3%,100% { opacity: 0 } }
+@keyframes tbF4 { 0%,42.9% { opacity: 0 } 43.3%,57.1% { opacity: 1 } 57.5%,100% { opacity: 0 } }
+@keyframes tbF5 { 0%,57.1% { opacity: 0 } 57.5%,71.4% { opacity: 1 } 71.8%,100% { opacity: 0 } }
+@keyframes tbF6 { 0%,71.4% { opacity: 0 } 71.8%,85.7% { opacity: 1 } 86.1%,100% { opacity: 0 } }
+@keyframes tbF7 { 0%,85.7% { opacity: 0 } 86.1%,100% { opacity: 1 } }
+.tb1 { animation: tbF1 21s linear infinite }
+.tb2 { animation: tbF2 21s linear infinite }
+.tb3 { animation: tbF3 21s linear infinite }
+.tb4 { animation: tbF4 21s linear infinite }
+.tb5 { animation: tbF5 21s linear infinite }
+.tb6 { animation: tbF6 21s linear infinite }
+.tb7 { animation: tbF7 21s linear infinite }
+
+@keyframes tmF1 { 0%,25% { opacity: 1 } 25.5%,100% { opacity: 0 } }
+@keyframes tmF2 { 0%,25% { opacity: 0 } 25.5%,50% { opacity: 1 } 50.5%,100% { opacity: 0 } }
+@keyframes tmF3 { 0%,50% { opacity: 0 } 50.5%,75% { opacity: 1 } 75.5%,100% { opacity: 0 } }
+@keyframes tmF4 { 0%,75% { opacity: 0 } 75.5%,100% { opacity: 1 } }
+.tm1 { animation: tmF1 12s linear infinite }
+.tm2 { animation: tmF2 12s linear infinite }
+.tm3 { animation: tmF3 12s linear infinite }
+.tm4 { animation: tmF4 12s linear infinite }
+
+@keyframes pkF1 { 0%,25% { opacity: 1 } 25.5%,100% { opacity: 0 } }
+@keyframes pkF2 { 0%,25% { opacity: 0 } 25.5%,50% { opacity: 1 } 50.5%,100% { opacity: 0 } }
+@keyframes pkF3 { 0%,50% { opacity: 0 } 50.5%,75% { opacity: 1 } 75.5%,100% { opacity: 0 } }
+@keyframes pkF4 { 0%,75% { opacity: 0 } 75.5%,100% { opacity: 1 } }
+.pk1 { animation: pkF1 12s linear infinite }
+.pk2 { animation: pkF2 12s linear infinite }
+.pk3 { animation: pkF3 12s linear infinite }
+.pk4 { animation: pkF4 12s linear infinite }

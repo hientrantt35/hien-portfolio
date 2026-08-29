@@ -1,0 +1,38 @@
+body { margin: 0; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+a { color: #0E0E0E; text-decoration: none; }
+a:hover { color: #F04438; }
+
+.cta { transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s ease }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(20,23,26,0.22); color: #FFFFFF }
+.cta .ar { transition: transform .25s cubic-bezier(.2,.7,.3,1) }
+.cta:hover .ar { transform: translateX(5px) }
+.cta-o:hover { color: #14171A; border-color: #14171A; box-shadow: 0 10px 22px rgba(20,23,26,0.10) }
+
+.back-to-top:hover { background: #F5B546; color: #0E0E0E; border-color: #F5B546 }
+
+@keyframes hondaSlide { 0%,26% { opacity: 1 } 33%,93% { opacity: 0 } 100% { opacity: 1 } }
+.hs1, .hs2, .hs3 { animation: hondaSlide 9s linear infinite }
+.hs2 { animation-delay: -6s }
+.hs3 { animation-delay: -3s }
+
+@keyframes aeonF1 { 0%,42% { opacity: 1 } 44%,98% { opacity: 0 } 100% { opacity: 1 } }
+@keyframes aeonF2 { 0%,42% { opacity: 0 } 43%,52% { opacity: 1 } 53%,100% { opacity: 0 } }
+@keyframes aeonF3 { 0%,51% { opacity: 0 } 52%,61% { opacity: 1 } 62%,100% { opacity: 0 } }
+@keyframes aeonF4 { 0%,60% { opacity: 0 } 61%,70% { opacity: 1 } 71%,100% { opacity: 0 } }
+@keyframes aeonF5 { 0%,69% { opacity: 0 } 70%,79% { opacity: 1 } 80%,100% { opacity: 0 } }
+@keyframes aeonF6 { 0%,78% { opacity: 0 } 79%,88% { opacity: 1 } 89%,100% { opacity: 0 } }
+@keyframes aeonF7 { 0%,87% { opacity: 0 } 88%,99% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes aeonScroll1 { 0%,4% { transform: translateY(0) } 30%,38% { transform: translateY(-44%) } 42%,100% { transform: translateY(0) } }
+.as1 { animation: aeonF1 16s linear infinite }
+.as2 { animation: aeonF2 16s linear infinite }
+.as3 { animation: aeonF3 16s linear infinite }
+.as4 { animation: aeonF4 16s linear infinite }
+.as5 { animation: aeonF5 16s linear infinite }
+.as6 { animation: aeonF6 16s linear infinite }
+.as7 { animation: aeonF7 16s linear infinite }
+.as1 img.scr { animation: aeonScroll1 16s ease-in-out infinite }
+.as3 img { transform: translateY(-13%) }
+.as7 img { transform: translateY(-10%) }
+
+@keyframes msScroll { 0%,6% { transform: translateY(0) } 50%,60% { transform: translateY(-81%) } 96%,100% { transform: translateY(0) } }
+.ms1 { animation: msScroll 26s ease-in-out infinite }

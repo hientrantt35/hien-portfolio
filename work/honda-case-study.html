@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honda Vietnam — App UX Improvement | Hien</title>
+<meta name="description" content="Case study: improving UX for My Honda+, the official app for millions of Honda Vietnam owners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/honda.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div style="font-family: Archivo, system-ui, sans-serif; color: #0E0E0E; background: #FAFAF8; min-height: 100vh; padding-bottom: 120px">
+
+  <div aria-hidden="true" style="position: fixed; left: 22px; top: 50%; transform: translateY(-50%); z-index: 40; width: 3px; height: 260px; background: #E4E4E2; border-radius: 999px; overflow: hidden; pointer-events: none">
+    <div id="om-rail-fill" style="position: absolute; top: 0; left: 0; width: 100%; height: 0; border-radius: 999px; background: linear-gradient(#3E8FA8 0 34%, #F04438 34% 67%, #F5B546 67% 100%)"></div>
+  </div>
+
+  <span id="top"></span>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 24px 56px; position: sticky; top: 0; z-index: 30; border-bottom: 1px solid #E4E4E2; background: rgba(250,250,248,0.92); backdrop-filter: blur(8px)">
+    <a href="../index.html#top" style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: #0E0E0E; display: inline-flex; align-items: center">Hien<span style="position: relative; display: inline-block; width: 20.7px; height: 20.7px; margin-left: 8px; flex: 0 0 auto"><span style="position: absolute; left: 0; bottom: 0; width: 10.3px; height: 10.3px; border-radius: 2.2px; background: #3E8FA8; transform: rotate(-14deg)"></span><span style="position: absolute; right: 0; bottom: 4.5px; width: 7.2px; height: 7.2px; border-radius: 1.8px; background: #F5B546; transform: rotate(18deg)"></span><span style="position: absolute; left: 5.6px; top: 0; width: 8.5px; height: 8.5px; border-radius: 2.0px; background: #F04438; transform: rotate(6deg)"></span></span></a>
+    <nav style="display: flex; align-items: center; gap: 34px; font-size: 14px">
+      <a href="../index.html#work" style="color: #0E0E0E">Work</a>
+      <a href="../about.html" style="color: #55606B">About me</a>
+      <a href="#" style="color: #55606B">Resume</a>
+      <a href="#" aria-label="LinkedIn" style="display: inline-flex; color: #55606B"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM2.4 21.5h5.16V9.04H2.4V21.5zM9.9 9.04h4.95v1.7h.07c.69-1.24 2.37-2.55 4.88-2.55 5.22 0 6.18 3.3 6.18 7.6v5.71h-5.15v-5.06c0-1.21-.02-2.76-1.75-2.76-1.75 0-2.02 1.31-2.02 2.67v5.15H9.9V9.04z"></path></svg></a>
+    </nav>
+  </header>
+
+  <section style="background: #FAFAF8; color: #0E0E0E; padding: 0">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 88px 80px 0">
+      <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap">
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; padding: 8px 14px; border-radius: 999px; color: #FFFFFF; background-color: #C2261B">02 — APP UX IMPROVEMENT</span>
+        <span style="font-size: 13px; letter-spacing: 0.14em; color: #8A8A85">HONDA VIETNAM</span>
+      </div>
+      <h1 style="margin: 40px 0 0; font-size: clamp(52px, 6.4vw, 104px); font-weight: 700; line-height: 0.95; letter-spacing: -0.045em; max-width: 25ch; text-wrap: pretty">Better UX for millions of Honda Vietnam owners</h1>
+      <div style="margin-top: 48px; display: grid; gap: 14px; justify-items: start">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <span style="font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 999px; border: 1px solid #0E0E0E; color: #0E0E0E">Mobile app</span>
+          <span style="font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 999px; border: 1px solid #0E0E0E; color: #0E0E0E">UX design</span>
+          <span style="font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 999px; border: 1px solid #0E0E0E; color: #0E0E0E">Heuristic analysis</span>
+          <span style="font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 999px; border: 1px solid #0E0E0E; color: #0E0E0E">Usability testing</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 76px; background-color: #B0E4FF">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 64px 40px 96px">
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; justify-items: center">
+          <div style="width: 100%; max-width: 232px; box-sizing: border-box; background: #14171A; border-radius: 40px; padding: 8px; box-shadow: 0 24px 56px rgba(0,0,0,0.42); transform: translateY(0px)">
+            <div style="position: relative; border-radius: 33px; overflow: hidden; background: #F1F1EE; aspect-ratio: 9/19.5"><img src="../uploads/HO-001-01 - 2.png" alt="Home screen with vehicle card" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"><div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 58px; height: 17px; border-radius: 999px; background: #14171A; pointer-events: none"></div></div>
+          </div>
+          <div style="width: 100%; max-width: 232px; box-sizing: border-box; background: #14171A; border-radius: 40px; padding: 8px; box-shadow: 0 24px 56px rgba(0,0,0,0.42); transform: translateY(28px)">
+            <div style="position: relative; border-radius: 33px; overflow: hidden; background: #F1F1EE; aspect-ratio: 9/19.5"><img src="../uploads/4-bb67c21c.png" alt="Add vehicle, VIN registration method" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"><div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 58px; height: 17px; border-radius: 999px; background: #14171A; pointer-events: none"></div></div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: repeat(6, 1fr); gap: 12px; height: 540px">
+          <div style="grid-column: 1 / 5; grid-row: 1 / 3; border-radius: 6px; overflow: hidden; background: #9BD8F5; box-shadow: 0 14px 34px rgba(0,0,0,0.18)"><img src="../uploads/pasted-1787258722739-0.png" alt="Riders at a street crossing in Vietnam" style="display: block; width: 100%; height: 100%; object-fit: cover"></div>
+          <div style="grid-column: 5 / 7; grid-row: 1 / 4; border-radius: 6px; overflow: hidden; background: #9BD8F5; box-shadow: 0 14px 34px rgba(0,0,0,0.18)"><img src="../uploads/pasted-1787258763015-0.png" alt="Honda app splash screen on a phone" style="display: block; width: 100%; height: 100%; object-fit: cover"></div>
+          <div style="grid-column: 1 / 3; grid-row: 3 / 7; border-radius: 6px; overflow: hidden; background: #9BD8F5; box-shadow: 0 14px 34px rgba(0,0,0,0.18)"><img src="../uploads/pasted-1787258754968-0.png" alt="Cub parked in front of blue shutters" style="display: block; width: 100%; height: 100%; object-fit: cover"></div>
+          <div style="grid-column: 3 / 7; grid-row: 4 / 7; border-radius: 6px; overflow: hidden; background: #9BD8F5; box-shadow: 0 14px 34px rgba(0,0,0,0.18)"><img src="../uploads/pasted-1787258779602-0.png" alt="Hanoi street traffic under red flags" style="display: block; width: 100%; height: 100%; object-fit: cover"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 80px auto 0; padding: 0 80px">
+    <div style="display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.95fr); gap: 32px; align-items: stretch">
+      <div style="background: #FFFFFF; border-radius: 10px; padding: 52px 56px; box-shadow: 0 18px 40px rgba(14,14,14,0.08)">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; color: #8A8A85; margin-bottom: 22px">OVERVIEW</div>
+        <p style="margin: 0; font-size: clamp(22px, 2.1vw, 30px); font-weight: 500; line-height: 1.42; letter-spacing: -0.02em; text-wrap: pretty">My Honda+ connects one of Vietnam's largest vehicle manufacturers to millions of owners nationwide, and had a strong installed base, but <b style="color: #100F0F; background-color: #FCE8A6">a large share of users who downloaded the app never became regular, active users.</b> Improving the UX was part of our approach to solving that.</p>
+      </div>
+      <div style="background: #EFEAE3; border-radius: 10px; padding: 44px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px 24px; align-content: center">
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8A85">CLIENT</div>
+          <div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">Honda Vietnam</div>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8A85">TIMELINE</div>
+          <div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">9/2025~12/2025</div>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8A85">MY ROLE</div>
+          <div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">UX design, PM</div>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; color: #8A8A85">DESIGN TEAM</div>
+          <div style="margin-top: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">1 Sr. UX designer, <br>1 UX designer, <br>1 UI designer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 120px 80px 0">
+  <div style="border-top: 1px solid #0E0E0E; padding-top: 36px; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 80px; align-items: start; justify-content: center">
+      <div style="display: grid; gap: 20px; align-content: start">
+        <h2 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.03em">My role</h2>
+      </div>
+      <div style="display: grid; gap: 24px; max-width: 62ch">
+        <p style="margin: 0; font-size: 24px; line-height: 1.5; letter-spacing: -0.015em; text-wrap: pretty; align-self: flex-start">I led UX on the My Honda+ improvement project, working alongside 2 UI designers, and ran the project with Honda Vietnam as the client.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3A3A36; text-wrap: pretty">I planned and moderated the research. I broke the existing app down feature by feature to find where it could be that the stackles stopped users from using the app frequently in a heuristic analysis, and then, based on these insights, i designed and moderated a usability test to match how owners actually use it. From those findings, I set the improvement directions, presented them to the client to confirm the business, and carried the agreed direction through to hi-fi wireframes and a final round of testing.</p>
+      </div>
+    </div></section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 96px 80px 0">
+    <div style="border-top: 1px solid #E4E4E2; padding-top: 24px; margin-bottom: 28px; display: flex; align-items: baseline; gap: 16px">
+      <h2 style="margin: 0; font-size: 34px; letter-spacing: -0.03em">The process</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start">
+      <div style="border-left: 1px solid #C9D6DA; padding: 4px 0 4px 20px; display: grid; gap: 16px; align-content: start">
+        <div>
+          <h3 style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -0.01em">Research</h3>
+          <p style="margin: 8px 0 0; font-size: 12px; line-height: 1.55; color: #3A3A36; text-wrap: pretty">We conducted a heuristic analysis with a UX designer, visual designer, and frontend developer. From the findings, we designed 8 tasks and tested them with 10 users, measuring completion rate.</p>
+        </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #3E8FA8; transform: rotate(-14deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Heuristic Analysis</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><a href="../uploads/pasted-1787237640104-0.png" target="_blank" title="Open full size" style="display: block; box-sizing: border-box; width: 120px; height: 72px; border-radius: 4px; overflow: hidden; border: 1px solid #E4E4E2; background: #FFFFFF; flex: 0 0 auto"><img src="../uploads/pasted-1787237640104-0.png" alt="Heuristic analysis issue log" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left"></a></div>
+          </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F04438; transform: rotate(6deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Usability Testing</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><a href="../uploads/pasted-1787259566948-0.png" target="_blank" title="Open full size" style="display: block; box-sizing: border-box; width: 120px; height: 72px; border-radius: 4px; overflow: hidden; border: 1px solid #E4E4E2; background: #FFFFFF; flex: 0 0 auto"><img src="../uploads/pasted-1787259566948-0.png" alt="Task completion rates by user" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left"></a></div>
+          </div>
+      </div>
+      <div style="border-left: 1px solid #C9D6DA; padding: 4px 0 4px 20px; display: grid; gap: 16px; align-content: start">
+        <div>
+          <h3 style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -0.01em">UX Improvements</h3>
+          <p style="margin: 8px 0 0; font-size: 12px; line-height: 1.55; color: #3A3A36; text-wrap: pretty">Based on insights from the research, I developed improvement directions and presented them to the client to confirm business and technical feasibility before completing the hi-fi wireframe.</p>
+        </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #3E8FA8; transform: rotate(-14deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Improvement Direction</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"></div>
+          </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F04438; transform: rotate(6deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Wireframe</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><a href="../uploads/pasted-1787259704722-0.png" target="_blank" title="Open full size" style="display: block; box-sizing: border-box; width: 120px; height: 72px; border-radius: 4px; overflow: hidden; border: 1px solid #E4E4E2; background: #FFFFFF; flex: 0 0 auto"><img src="../uploads/pasted-1787259704722-0.png" alt="Hi-fi wireframe of the to-be add vehicle flow" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left"></a></div>
+          </div>
+      </div>
+      <div style="border-left: 1px solid #C9D6DA; padding: 4px 0 4px 20px; display: grid; gap: 16px; align-content: start">
+        <div>
+          <h3 style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -0.01em">User Testing and Iteration</h3>
+          <p style="margin: 8px 0 0; font-size: 12px; line-height: 1.55; color: #3A3A36; text-wrap: pretty">Verified the design with 6 users and updated the design as needed.</p>
+        </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #3E8FA8; transform: rotate(-14deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Acceptance Testing</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><a href="../uploads/pasted-1787259944552-0.png" target="_blank" title="Open full size" style="display: block; box-sizing: border-box; width: 120px; height: 72px; border-radius: 4px; overflow: hidden; border: 1px solid #E4E4E2; background: #FFFFFF; flex: 0 0 auto"><img src="../uploads/pasted-1787259944552-0.png" alt="Acceptance test wrap-up: 6/6 users completed the add vehicle flow" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left"></a></div>
+          </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F04438; transform: rotate(6deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Design Iteration</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><a href="../uploads/pasted-1787259810393-0.png" target="_blank" title="Open full size" style="display: block; box-sizing: border-box; width: 120px; height: 72px; border-radius: 4px; overflow: hidden; border: 1px solid #E4E4E2; background: #FFFFFF; flex: 0 0 auto"><img src="../uploads/pasted-1787259810393-0.png" alt="Dealer search before and after usability testing" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left"></a></div>
+          </div>
+          <div style="display: grid; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #F5B546; transform: rotate(18deg); flex: 0 0 auto"></span><span style="font-size: 12px; font-weight: 500; color: #0E0E0E">Documenting for Delivery</span></div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><a href="../uploads/pasted-1787259818449-0.png" target="_blank" title="Open full size" style="display: block; box-sizing: border-box; width: 120px; height: 72px; border-radius: 4px; overflow: hidden; border: 1px solid #E4E4E2; background: #FFFFFF; flex: 0 0 auto"><img src="../uploads/pasted-1787259818449-0.png" alt="Annotated add vehicle flow for handoff" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left"></a></div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 120px 80px 0">
+    <div style="border-top: 1px solid #0E0E0E; padding-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 80px">
+      <div>
+        <h2 style="margin: 0 0 40px; font-size: 34px; font-weight: 600; letter-spacing: -0.03em">The Problems</h2>
+        <p style="margin: 0; font-size: 34px; font-weight: 500; line-height: 1.3; letter-spacing: -0.025em; color: #0E0E0E; text-wrap: pretty">The app offers many features that seems useful to users, but it <span style="padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; background-color: #FCE8A6">didn't communicate and work effectively.</span></p>
+      </div>
+      <ol style="margin: 0; padding: 0; list-style: none; display: grid; gap: 0">
+        <li style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid #E4E4E2">
+          <span style="font-size: 34px; font-weight: 700; color: #C2261B; letter-spacing: -0.04em">01</span>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; text-wrap: pretty">At the crucial entrance feature, which is add a vehicle, the app didn't offer the most practical way for users to take this very crucial step to start using the app.</p>
+        </li><li style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid #E4E4E2">
+          <span style="font-size: 34px; font-weight: 700; color: #C2261B; letter-spacing: -0.04em">02</span>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; text-wrap: pretty">At the My Vehicle page, where users could have made the most of the information the app offers, it didn't align with users' expectations, leaving them no reason to keep coming back to use the app.</p>
+        </li><li style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid #E4E4E2; border-bottom: 1px solid #E4E4E2">
+          <span style="font-size: 34px; font-weight: 700; color: #C2261B; letter-spacing: -0.04em">03</span>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; text-wrap: pretty">Some features could have been very useful for motorbike owners but failed in practice.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 72px 80px 0">
+    <div style="display: flex; gap: 20px; align-items: flex-start; border-top: 1px solid #E4E4E2; padding-top: 32px">
+      <span style="font-size: 34px; font-weight: 700; line-height: 0.8; letter-spacing: -0.05em; color: #C2261B">01</span>
+      <div>
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: #8A8A85; text-transform: uppercase">At the crucial entrance feature, which is the Add a Vehicle page</div>
+        <h2 style="margin: 16px 0 0; font-size: 34px; font-weight: 600; line-height: 1.2; letter-spacing: -0.03em; max-width: 30ch; text-wrap: balance">Users couldn't find their likely most used method and <span style="background: #FCE8A6; padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">bypassed the app's guidance entirely</span></h2>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; border-top: 1px solid #E4E4E2; padding-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+      <div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #3A3A36; text-wrap: pretty">Out of 8 users, <span style="background: #FCE8A6; padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">4 were unable to add vehicles successfully</span> due to the number digit of VIN. Users experienced difficulty identifying the frame number, and some completed the task without referring to the provided instructions. The current instructions may not effectively help users locate or identify the required vehicle information.</p>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 36px; align-items: center">
+          <div style="width: 168px; height: 168px; flex: 0 0 auto; border-radius: 999px; background: conic-gradient(#F9D14E 0 50%, #E4002B 50% 100%); display: grid; place-items: center">
+            <div style="width: 98px; height: 98px; border-radius: 999px; background: #FAFAF8; display: grid; place-items: center; text-align: center">
+              <div>
+                <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.03em">8</div>
+                <div style="font-size: 13px; letter-spacing: 0.1em; color: #8A8A85">USERS</div>
+              </div>
+            </div>
+          </div>
+          <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; font-size: 13px; line-height: 1.45; min-width: 220px; flex: 1 1 220px">
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #A9A9A2"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #E4E4E2"></span><span><strong style="font-weight: 600">0%</strong> Completed smoothly</span></li>
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #F9D14E"></span><span><strong style="font-weight: 600">50%</strong> Struggled a little, but completed by themselves</span></li>
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #E4002B"></span><span><strong style="font-weight: 600">50%</strong> Not complete by themselves</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display: grid; gap: 24px; align-content: start">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+              <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 1042 / 2444"><img src="../uploads/pasted-1787240270259-0 crop.png" alt="Add vehicle screen, collapsed VIN guide" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div>
+            </div>
+          </div>
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+              <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 1042 / 2444"><img class="vinScroll" src="../uploads/vin-guide-crop.png" alt="Add vehicle screen, expanded VIN location guide" style="display: block; width: 100%; height: auto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 72px; background: #0E0E0E; color: #FAFAF8; padding: 56px 64px">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #F9D14E">WE BELIEVE THAT WE SHOULD</div>
+      <p style="margin: 20px 0 0; font-size: 34px; font-weight: 500; line-height: 1.25; letter-spacing: -0.025em; max-width: 26ch; text-wrap: pretty">Prioritize the method of adding a vehicle that users find <span style="background: rgba(249,209,78,0.32); padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">most convenient in practice.</span></p>
+    </div>
+
+    <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 64px; align-items: center">
+      <div>
+        <h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.025em">And users loved it.</h3>
+        <figure style="margin: 28px 0 0">
+          <blockquote style="margin: 0; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.45; letter-spacing: -0.01em; text-wrap: pretty">"I would choose to add a vehicle with registration license because it is always in the wallet. I think that adding by invoice and barcode is suitable for users who have just bought the vehicle"</blockquote>
+          <figcaption style="margin-top: 20px; font-size: 13px; font-weight: 500; color: #8A8A85">Mr. T (30)</figcaption>
+        </figure>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 280px)); gap: 32px; justify-content: center">
+      <div style="display: grid; gap: 14px; justify-items: center">
+        <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+          <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5"><div class="av1" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/1-1978986c.png" alt="Choose VIN method, by Invoice" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av2" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/2-ac1de378.png" alt="By Barcode guidance" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av3" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/3-af787c85.png" alt="By Registration Paper guidance" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av4" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/4-bb67c21c.png" alt="VIN locations directly on the vehicle" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av5" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/5-29d71e9f.png" alt="Tap to scan or enter VIN" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av6" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/6-7d74bba8.png" alt="Camera capture of the document" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av7" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/7-377ffc6a.png" alt="Input vehicle info" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="av8" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/8-c1d92011.png" alt="Addition completed" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 96px">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #E4002B">WE ALSO IMPROVED UX BY</div>
+      <p style="margin: 20px 0 0; font-size: 24px; font-weight: 500; line-height: 1.35; letter-spacing: -0.02em; max-width: 40ch; text-wrap: pretty">Adding a progress bar, progressive info revealing guide users step by step without overwhelming them, providing a jargon explainer make it easier for even new bike holders.</p>
+      <div style="margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+        <div style="display: grid; gap: 20px">
+          <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+            <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">1</span>
+            <div>
+              <div style="font-size: 17px; font-weight: 600">Progress bar</div>
+              <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Splitting the flow into distinct steps makes the process easier to follow and reduces cognitive load.</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+            <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">2</span>
+            <div>
+              <div style="font-size: 17px; font-weight: 600">Progressive disclosure</div>
+              <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Guidance for the selected method is revealed step-by-step, so users are guided without being overwhelmed upfront.</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+            <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">3</span>
+            <div>
+              <div style="font-size: 17px; font-weight: 600">Jargon explainer</div>
+              <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">A tappable prompt clarifies technical terms, making the flow more approachable for first-time bike owners.</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+            <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">4</span>
+            <div>
+              <div style="font-size: 17px; font-weight: 600">Built-in support</div>
+              <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">A "Contact nearest Honda dealer for support" option gives users a way forward if they get stuck, instead of leaving them to fail silently.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: grid; gap: 24px; align-content: start">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+            <div style="display: grid; gap: 12px; justify-items: center">
+              <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+                <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5"><img src="../uploads/1-1978986c.png" alt="Add vehicle screen, top half: progress bar, VIN method options, jargon explainer" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center">
+                <span style="position: absolute; top: 13%; left: 10px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35)">1</span>
+                <span style="position: absolute; top: 56%; right: 10px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35)">3</span>
+                <span style="position: absolute; top: 281px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35); left: 8px">2</span>
+              </div>
+              </div>
+            </div>
+            <div style="display: grid; gap: 12px; justify-items: center">
+              <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+                <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5"><img src="../uploads/1-1978986c.png" alt="Add vehicle screen, bottom half: invoice photo example and support notice" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: bottom center">
+                <span style="position: absolute; top: 62%; right: 10px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35)">4</span>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 140px 80px 0">
+    <div style="display: flex; gap: 20px; align-items: flex-start; border-top: 1px solid #E4E4E2; padding-top: 32px">
+      <span style="font-size: 34px; font-weight: 700; line-height: 0.8; letter-spacing: -0.05em; color: #E4002B">02</span>
+      <div>
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: #8A8A85; text-transform: uppercase">At the My Vehicle page, where users could have made the most of the information the app offers but</div>
+        <h2 style="margin: 16px 0 0; font-size: 34px; font-weight: 600; line-height: 1.2; letter-spacing: -0.03em; max-width: 22ch; text-wrap: pretty">The page didn't give users <span style="background: #FCE8A6; padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">a reason to come back</span></h2>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; border-top: 1px solid #E4E4E2; padding-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+      <div>
+        <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #3A3A36; text-wrap: pretty">6/8 users initially understand the purpose of some features by simply viewing the section names. However, when they are required to use it, <span style="background: #FCE8A6; padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">the majority of users have many questions and got confused by the design.</span></p>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 36px; align-items: center">
+          <div style="width: 168px; height: 168px; flex: 0 0 auto; border-radius: 999px; background: conic-gradient(#E4002B 0 50%, #F9D14E 50% 75%, #FDECB4 75% 100%); display: grid; place-items: center">
+            <div style="width: 98px; height: 98px; border-radius: 999px; background: #FAFAF8; display: grid; place-items: center; text-align: center">
+              <div>
+                <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.03em">8</div>
+                <div style="font-size: 13px; letter-spacing: 0.1em; color: #8A8A85">USERS</div>
+              </div>
+            </div>
+          </div>
+          <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; font-size: 13px; line-height: 1.45; min-width: 220px; flex: 1 1 220px">
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #E4002B"></span><span><strong style="font-weight: 600">50%</strong> Completed smoothly</span></li>
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #F9D14E"></span><span><strong style="font-weight: 600">25%</strong> Struggled a little, but completed by themselves</span></li>
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #FDECB4"></span><span><strong style="font-weight: 600">25%</strong> Not complete by themselves</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display: grid; gap: 24px; align-content: start">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+              <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5"><img class="hv3" src="../uploads/vehicle-detail-crop.png" alt="Vehicle detail screen, scrolling through warranty, PI, parts reminders, service and repair history" style="display: block; width: 100%; height: auto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 72px; background: #0E0E0E; color: #FAFAF8; padding: 56px 64px">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #F9D14E">SO,</div>
+      <p style="margin: 20px 0 0; font-size: 34px; font-weight: 500; line-height: 1.25; letter-spacing: -0.025em; max-width: 26ch; text-wrap: pretty">Enhance the UI and UX to make  clearer affordances, predictable outcomes</p>
+    </div>
+
+    <div style="margin-top: 56px">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #E4002B">WE ALSO</div>
+      <p style="margin: 20px 0 0; font-size: 24px; font-weight: 500; line-height: 1.35; letter-spacing: -0.02em; max-width: 40ch; text-wrap: pretty">Enhance the card order, leverage the PI history data, ensure that clicking on it will reveal the service history details screen, and modify labels making it more sense from user perspective</p>
+      <div style="margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+        <div style="display: grid; gap: 20px">
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">1</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Card order</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Arrange the user section that is highly necessary for the user (booking service) at the top of the screen</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">2</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Reduced cognitive load</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Sections with content that changes stay open by default; static, rarely-changing sections collapse, reducing clutter.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">3</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Make this most usefull of provided information</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Align with the user's expectation, make it possible for users to check the maintenance history details</p>
+          </div>
+        </div><div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">4</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Modified labels</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Made it tappable, leading to a new dedicated PI History screen directly resolving the "users tried to click because they expected more detail" finding.</p>
+          </div>
+        </div>
+        </div>
+      <div style="display: grid; gap: 24px; align-content: start">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+              <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5"><div class="piA" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img class="hv4" src="../uploads/vehicle-detail-after-crop.png" alt="Redesigned vehicle detail screen with booking, recall, PI and collapsed sections" style="display: block; width: 100%; height: auto"></div><div class="piB" style="position: absolute; inset: 0; overflow: hidden; background: #FFFFFF"><img src="../uploads/pi-history-crop.png" alt="Periodical inspection history detail screen" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; border-top: 1px solid #E4E4E2; padding-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #8A8A85"><span style="width: 11px; height: 11px; border-radius: 2.4px; background: #F5B546; transform: rotate(18deg)"></span>ACCEPTANCE TESTING — 6 USERS</div>
+        <h3 style="margin: 16px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.025em; text-wrap: pretty">And users completed smoothly in the verification</h3>
+      </div>
+      <div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #3A3A36"><span style="background: #FCE8A6; padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">6/6 users understand</span> the sections displayed in this screen.</p>
+        <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; font-size: 17px; line-height: 1.6; color: #3A3A36">
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px"><span style="color: #E4002B">—</span>Reasonable display order</li>
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px"><span style="color: #E4002B">—</span>Users feel no problem when some seemingly unimportant sections are displayed in the lower area and remain closed by default.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 140px 80px 0">
+    <div style="display: flex; gap: 20px; align-items: flex-start; border-top: 1px solid #E4E4E2; padding-top: 32px">
+      <span style="font-size: 34px; font-weight: 700; line-height: 0.8; letter-spacing: -0.05em; color: #E4002B">03</span>
+      <div>
+        <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: #8A8A85; text-transform: uppercase">While users are using Favorite to bookmark, Follow a vehicle &amp; Like a vehicle color features</div>
+        <h2 style="margin: 16px 0 0; font-size: 34px; font-weight: 600; line-height: 1.2; letter-spacing: -0.03em; max-width: 24ch; text-wrap: pretty">These features could have made users engaging with the app frequently but <span style="background: #FCE8A6; padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">failed in practice</span></h2>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+      <div>
+        <dl style="margin: 0; display: grid; gap: 0">
+          <div style="border-top: 1px solid #E4E4E2; padding: 20px 0; display: grid; gap: 6px">
+            <dt style="margin: 0; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: center; font-size: 17px; font-weight: 600; color: #E4002B"><span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">1</span><span>Favorite</span></dt>
+            <dd style="margin: 0; font-size: 17px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Users don't know saved dealers can be reviewed later from the top My vehicle page, or what value the list offers.</dd>
+          </div>
+          <div style="border-top: 1px solid #E4E4E2; padding: 20px 0; display: grid; gap: 6px">
+            <dt style="margin: 0; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: center; font-size: 17px; font-weight: 600; color: #E4002B"><span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">2</span><span>Follow</span></dt>
+            <dd style="margin: 0; font-size: 17px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Doesn't read as clickable, and its outcome isn't predictable.</dd>
+          </div>
+          <div style="border-top: 1px solid #E4E4E2; padding: 20px 0; display: grid; gap: 6px">
+            <dt style="margin: 0; display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: center; font-size: 17px; font-weight: 600; color: #E4002B"><span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">3</span><span>Like</span></dt>
+            <dd style="margin: 0; font-size: 17px; line-height: 1.6; color: #3A3A36; text-wrap: pretty"><span style="padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; background-color: #FAFAF8">Users mistake it for a bookmark,</span> expecting the app to follow up with info on that color later.</dd>
+          </div>
+        </dl>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 36px; align-items: center">
+          <div style="width: 168px; height: 168px; flex: 0 0 auto; border-radius: 999px; background: conic-gradient(#FDECB4 0 12.5%, #F9D14E 12.5% 37.5%, #E4002B 37.5% 100%); display: grid; place-items: center">
+            <div style="width: 98px; height: 98px; border-radius: 999px; background: #FAFAF8; display: grid; place-items: center; text-align: center">
+              <div>
+                <div style="font-size: 24px; font-weight: 700; letter-spacing: -0.03em">8</div>
+                <div style="font-size: 13px; letter-spacing: 0.1em; color: #8A8A85">USERS</div>
+              </div>
+            </div>
+          </div>
+          <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; font-size: 13px; line-height: 1.45; min-width: 220px; flex: 1 1 220px">
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #FDECB4"></span><span><strong style="font-weight: 600">12.5%</strong> Completed smoothly</span></li>
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #F9D14E"></span><span><strong style="font-weight: 600">25%</strong> Struggled a little, but completed by themselves</span></li>
+            <li style="display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; color: #3A3A36"><span style="width: 10px; height: 10px; margin-top: 5px; border-radius: 2px; background: #E4002B"></span><span><strong style="font-weight: 600">62.5%</strong> Not complete by themselves</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display: grid; gap: 24px; align-content: start">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; align-items: start">
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="position: relative; width: 100%; max-width: 250px; border-radius: 14px; overflow: hidden; background: #F1F1EE; box-shadow: 0 10px 26px rgba(14,14,14,0.12); aspect-ratio: 447/1221"><img src="../uploads/pasted-1787256338223-0-crop.png" alt="Dealer detail screen with heart icon and Add to favorite button" style="display: block; width: 100%; height: 100%; object-fit: cover">
+              <span style="position: absolute; top: 87%; left: 8px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35)">1</span>
+            </div>
+            <div style="font-size: 12px; letter-spacing: 0.08em; color: #8A8A85">DEALER DETAIL</div>
+          </div>
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="position: relative; width: 100%; max-width: 250px; border-radius: 14px; overflow: hidden; background: #F1F1EE; box-shadow: 0 10px 26px rgba(14,14,14,0.12); aspect-ratio: 430/1281"><img src="../uploads/pasted-1787256350909-0-crop.png" alt="Vehicle price and color screen with Follow and colour Like" style="display: block; width: 100%; height: 100%; object-fit: cover">
+              <span style="position: absolute; top: 135px; left: 111px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35)">2</span>
+              <span style="position: absolute; top: 66%; right: 8px; font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.35)">3</span>
+            </div>
+            <div style="font-size: 12px; letter-spacing: 0.08em; color: #8A8A85">VEHICLE PRICE &amp; COLOR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 72px; background: #0E0E0E; color: #FAFAF8; padding: 56px 64px">
+      <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #F9D14E">OUR SOLUTIONS WERE</div>
+      <p style="margin: 20px 0 0; font-size: 34px; font-weight: 500; line-height: 1.25; letter-spacing: -0.025em; max-width: 26ch; text-wrap: pretty">Enhancing the UI and UX of these existing features by using <span style="background: rgba(249,209,78,0.32); padding: 0 6px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone">universal design</span> that users are familiar with.</p>
+    </div>
+
+    <div style="margin-top: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 56px; align-items: start">
+      <div style="display: grid; gap: 20px">
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">1</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Clear response</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Every tap now confirms what just happened and where the result went, so the outcome of Favorite, Follow, and Like is never left to guesswork.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">2</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Help users to learn</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">A short first-use hint explains what saving a dealer gets you, and the saved list is surfaced where users already look instead of being buried on the top page.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start; border-top: 1px solid #E4E4E2; padding-top: 18px">
+          <span style="font-size: 13px; font-weight: 700; color: #FAFAF8; background: #E4002B; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center">3</span>
+          <div>
+            <div style="font-size: 17px; font-weight: 600">Utilize conventional icon designs</div>
+            <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.6; color: #3A3A36; text-wrap: pretty">Familiar icons replace the ambiguous ones, so a bookmark reads as saving and a heart reads as liking, matching what users already expect from other apps.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; gap: 24px; align-content: start">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+            <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5">
+              <div class="dsA" style="position: absolute; inset: 0; background: #FFFFFF">
+                <img src="../uploads/pasted-1787256338223-0-crop.png" alt="Dealer detail screen with the save button" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: bottom center">
+                <span class="dsTap" style="position: absolute; left: 13.2%; right: 14.1%; top: 84.9%; height: 4.7%; border-radius: 8px; box-shadow: 0 0 0 2px rgba(228,0,43,0.55)"></span>
+                <span class="dsToast" style="position: absolute; left: 5%; right: 5%; bottom: 3%; display: block">
+                  <img src="../uploads/pasted-1787257097853-0-crop.png" alt="Saved to My dealers, View" style="display: block; width: 100%; height: auto; border-radius: 10px">
+                </span>
+              </div>
+              <div class="dsB" style="position: absolute; inset: 0; background: #FFFFFF">
+                <img src="../uploads/pasted-1787256171340-0-crop.png" alt="My dealers on the My Vehicle top page" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center">
+              </div>
+            </div>
+            </div>
+          </div>
+          <div style="display: grid; gap: 12px; justify-items: center">
+            <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(14,14,14,0.16)">
+            <div style="position: relative; border-radius: 37px; overflow: hidden; background: #FFFFFF; aspect-ratio: 9/19.5">
+              <div class="dsA" style="position: absolute; inset: 0; background: #FFFFFF">
+                <img src="../uploads/follow-product.png" alt="Vehicle detail screen with the Follow button" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center">
+                <span class="dsTap" style="position: absolute; left: 76%; right: 4%; top: 4.4%; height: 7%; border-radius: 8px; box-shadow: 0 0 0 2px rgba(228,0,43,0.55)"></span>
+                <span class="dsToast" style="position: absolute; left: 5%; right: 5%; bottom: 3%; display: block">
+                  <img src="../uploads/follow-toast.png" alt="Saved to My following vehicle, View" style="display: block; width: 100%; height: auto; border-radius: 10px">
+                </span>
+              </div>
+              <div class="dsB" style="position: absolute; inset: 0; background: #FFFFFF">
+                <img src="../uploads/follow-list.png" alt="My following vehicle list" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center">
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 140px 80px 0">
+    <div style="border-top: 1px solid #0E0E0E; padding-top: 36px; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 80px; align-items: start">
+      <h2 style="margin: 0; font-size: 40px; font-weight: 600; letter-spacing: -0.03em">My reflection</h2>
+      <div style="display: grid; gap: 26px; max-width: 62ch">
+      <p style="margin: 0; font-size: 24px; line-height: 1.5; letter-spacing: -0.015em; text-wrap: pretty">This is the first project where I have worked with many stakeholders, especially the backend team.</p>
+      <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 20px; align-items: start">
+        <span style="width: 11px; height: 11px; margin-top: 9px; border-radius: 2.4px; background: #3E8FA8; transform: rotate(-14deg)"></span>
+        <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #3A3A36; text-wrap: pretty"><span style="font-weight: 600; color: #0E0E0E">What went well.</span> Testing every direction with real owners kept the team honest. When the research showed that riders reach for their registration licence rather than a frame number, we changed the default instead of defending the original flow, and the client agreed because the evidence was in front of them.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 20px; align-items: start">
+        <span style="width: 11px; height: 11px; margin-top: 9px; border-radius: 2.4px; background: #F04438; transform: rotate(6deg)"></span>
+        <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #3A3A36; text-wrap: pretty"><span style="font-weight: 600; color: #0E0E0E">What I would do differently.</span> I would have brought the frontend developer into the research sessions earlier. We confirmed technical feasibility after the improvement directions were drawn, which meant reworking details we could have settled in the first week.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+<nav aria-label="Previous and next" style="font-family: Archivo, system-ui, sans-serif; background: #FAFAF8; margin-top: 140px">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 80px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); border-top: 1px solid #E4E4E2; border-bottom: 1px solid #E4E4E2">
+        <a href="../index.html#work" class="pn-link" style="display: grid; gap: 12px; padding: 44px 32px 46px 4px; color: #0E0E0E; border-right: 1px solid #E4E4E2">
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: #8A8A85"><span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 2.0px; background: #3E8FA8; transform: rotate(-8deg); flex: 0 0 auto"></span> PREVIOUS</span>
+          <span style="font-size: clamp(28px, 3.2vw, 40px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.06">All Work</span>
+        </a>
+        <a href="aeon-case-study.html" class="pn-link" style="display: grid; gap: 12px; padding: 44px 4px 46px 32px; color: #0E0E0E; justify-items: end; text-align: right">
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: #8A8A85">NEXT <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 2.0px; background: #F5B546; transform: rotate(10deg); flex: 0 0 auto"></span></span>
+          <div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 12px"><span style="font-size: clamp(28px, 3.2vw, 40px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.06">Aeon Cinema</span></div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+<a href="#top" aria-label="Back to top" title="Back to top" class="back-to-top" style="position: fixed; right: 28px; bottom: 28px; z-index: 60; width: 48px; height: 48px; border-radius: 11px; background: #0E0E0E; color: #FAFAF8; border: 1px solid #0E0E0E; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; line-height: 1; box-shadow: 0 6px 20px rgba(14,14,14,0.14)"><span aria-hidden="true">↑</span></a>
+
+</div>
+<script>
+(function () {
+  var el = document.getElementById('om-rail-fill');
+  function tick() {
+    if (!el) return;
+    var de = document.scrollingElement || document.documentElement;
+    var max = Math.max(1, de.scrollHeight - de.clientHeight);
+    var pct = Math.min(1, Math.max(0, (de.scrollTop || window.scrollY || 0) / max));
+    el.style.height = (pct * 100).toFixed(2) + '%';
+  }
+  setInterval(tick, 100);
+  tick();
+})();
+</script>
+<script src="../js/back-to-top.js"></script>
+</body>
+</html>
