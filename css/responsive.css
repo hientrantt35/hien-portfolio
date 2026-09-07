@@ -4,21 +4,87 @@
 .back-to-top { opacity: 0; pointer-events: none; transition: opacity .2s ease; }
 .back-to-top.show { opacity: 1; pointer-events: auto; }
 
+/* ---- floating bottom tab bar: hidden by default, shown on mobile only ---- */
+.mobile-tab-bar {
+  display: none;
+}
+
 @media (max-width: 760px) {
 
-  /* ---- header: stack logo row + full-width nav row ---- */
+  /* ---- reserve space so page content never sits under the fixed tab bar ---- */
+  body {
+    padding-bottom: 110px !important;
+  }
+
+  /* ---- header: just the logo now; nav row moves to the bottom tab bar ---- */
   header {
-    flex-wrap: wrap !important;
-    row-gap: 12px !important;
     padding: 16px 20px !important;
   }
   header nav {
-    width: 100% !important;
-    justify-content: space-between !important;
-    gap: 10px !important;
-    font-size: 13px !important;
+    display: none !important;
   }
-  header nav a { white-space: nowrap !important; }
+
+  /* ---- floating bottom tab bar ---- */
+  .mobile-tab-bar {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    position: fixed;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: calc(100% - 32px);
+    background: #14171A;
+    border-radius: 20px;
+    padding: 6px 8px;
+    box-shadow: 0 10px 30px rgba(14,14,14,0.28);
+    z-index: 50;
+    transition: transform .25s ease;
+  }
+  .mobile-tab-bar.tab-hidden {
+    transform: translateX(-50%) translateY(140%);
+  }
+  .mobile-tab-bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    flex: 0 0 auto;
+    width: 52px;
+    padding: 5px 3px;
+    border-radius: 12px;
+    color: rgba(255,255,255,0.65);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-align: center;
+    transition: color .2s ease, background .2s ease;
+  }
+  .mobile-tab-bar a:hover,
+  .mobile-tab-bar a[aria-current="page"] {
+    color: #FFFFFF;
+    background: rgba(255,255,255,0.12);
+  }
+  .mobile-tab-bar svg { width: 28px; height: 28px; }
+  .mobile-tab-bar .tab-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  .mobile-tab-bar a[aria-current="page"] .tab-avatar {
+    outline: 1.5px solid #FFFFFF;
+    outline-offset: 1px;
+  }
+
+  /* ---- back-to-top: sit above the tab bar instead of overlapping it ---- */
+  .back-to-top {
+    bottom: 84px !important;
+  }
 
   /* ---- generic side padding on page containers ---- */
   section[style*="auto"],
@@ -62,6 +128,30 @@
     grid-template-columns: 1fr !important;
   }
 
+  /* ---- testimonials: smaller cards, horizontal swipe carousel instead of stacking ---- */
+  .quote-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px !important;
+    padding-bottom: 6px !important;
+  }
+  .quote-grid .quote {
+    box-sizing: border-box !important;
+    flex: 0 0 auto !important;
+    width: 78vw !important;
+    max-width: 260px !important;
+    scroll-snap-align: start;
+    padding: 22px 20px 20px !important;
+    gap: 16px !important;
+  }
+  .quote-grid .quote blockquote {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
   /* ---- photo-collage masonry grid (Honda hero): stack to one column ---- */
   [style*="grid-template-columns: repeat(6, minmax(0, 1fr))"] {
     grid-template-columns: 1fr !important;
@@ -83,13 +173,47 @@
   [style*="padding: 44px 40px"] { padding: 24px 22px !important; }
   [style*="padding: 40px 44px"] { padding: 24px 22px !important; }
 
-  /* ---- keep intentionally horizontal-scrolling rows scrollable, not squished ---- */
+  /* ---- Honda hero collage: zoom into the phone mockup instead of showing its wide blue margins ---- */
+  img[alt="Honda app splash screen on a phone"] {
+    transform: scale(1.8);
+  }
+
+  /* ---- final-product horizontal scroll row: land on card 1 centered, not split between 2 cards ---- */
   [style*="grid-template-columns: repeat(4, 230px)"] {
     -webkit-overflow-scrolling: touch;
+    justify-content: flex-start !important;
+    padding-left: calc(50% - 115px) !important;
+    padding-right: calc(50% - 115px) !important;
+    scroll-snap-type: x mandatory;
+  }
+  [style*="grid-template-columns: repeat(4, 230px)"] > div {
+    scroll-snap-align: center;
   }
 
   /* ---- fixed scroll-progress rail (left: 22px) collides with mobile content padding ---- */
   [style*="left: 22px; top: 50%"] {
     display: none !important;
+  }
+
+  /* ---- phone mockups dominating the screen once stacked to one column on mobile ---- */
+  [style*="max-width: 208px; box-sizing: border-box; background: #14171A; border-radius: 34px"] {
+    max-width: 150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  [style*="max-width: 232px; box-sizing: border-box; background: #14171A"] {
+    max-width: 170px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  [style*="max-width: 280px; box-sizing: border-box; background: #0E0E0E"] {
+    max-width: 190px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ---- homepage: "Thinking I could be on your team?" — match the hero h1 size ---- */
+  [style*="font-size: 68px"] {
+    font-size: clamp(32px, 9vw, 52px) !important;
   }
 }
