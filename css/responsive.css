@@ -195,6 +195,11 @@
     display: none !important;
   }
 
+  /* ---- case study key visual banner (phone mockups / hero collage): hidden on mobile for now ---- */
+  [style*="margin-top: 76px; background-color"] {
+    display: none !important;
+  }
+
   /* ---- phone mockups dominating the screen once stacked to one column on mobile ---- */
   [style*="max-width: 208px; box-sizing: border-box; background: #14171A; border-radius: 34px"] {
     max-width: 150px !important;
