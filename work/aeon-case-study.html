@@ -298,18 +298,21 @@
     </div><div style="margin-top: 20px; background: #5457D6; color: #FAFAF8; border-radius: 10px; padding: 40px 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px 44px; align-items: center">
       <div style="display: grid; gap: 14px">
         <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #DBF78F">SOLUTION</div>
-        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.85); text-wrap: pretty">The system constraint did not disappear. The goal was to place its complexity where it created the least friction for users.</p>
-        <p style="margin: 0; font-size: 20px; font-weight: 500; line-height: 1.5; letter-spacing: -0.015em; text-wrap: pretty">I collapsed the two steps into one: <span style="color: #DBF78F">flattened radio-button options</span> representing pre-combined [Size + Flavor + Price] strings.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; letter-spacing: -0.01em; text-wrap: pretty">The system constraint did not disappear. The goal was to place its complexity where it created the least friction for users.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">I collapsed the two steps into one: <span style="color: #DBF78F">flattened radio-button options</span> representing pre-combined [Size + Flavor + Price] strings.</p>
         <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">Compensated on the UX layer instead of the data layer:</p>
-        <div style="display: grid; gap: 10px">
-          <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">1. Grouped options so the flat list still read as size-then-flavor logic visually</p>
-          <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">2. Showed price deltas transparently next to each option (e.g. +18,000đ)</p>
-          <p style="margin: 0; font-size: 16px; line-height: 1.6; text-wrap: pretty">3. Set the base combination as the default, so most users finish in one tap</p>
+        <div style="display: grid; gap: 8px">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">1. Grouped options so the flat list still read as size-then-flavor logic visually</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">2. Showed price deltas transparently next to each option (e.g. +18,000đ)</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">3. Set the base combination as the default, so most users finish in one tap</p>
         </div>
       </div>
-      <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(0,0,0,0.4)">
+      <div style="display: grid; gap: 14px; justify-items: center">
+        <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(0,0,0,0.4)">
           <div style="position: relative; border-radius: 37px; overflow: hidden; background: #F1F1EE; aspect-ratio: 9/19.5"><img src="../uploads/pasted-1787160499205-0.png" alt="Flattened combo options with price deltas" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"><div style="position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 64px; height: 19px; border-radius: 999px; background: #0E0E0E; pointer-events: none"></div><div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 88px; height: 4px; border-radius: 999px; background: rgba(14,14,14,0.3); pointer-events: none"></div></div>
         </div>
+        <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: rgba(255,255,255,0.85); text-align: center">COMBINED SIZE + FLAVOR + PRICE</span>
+      </div>
     </div>
   </section>
 
@@ -342,19 +345,18 @@
       </div>
     </div>
 
-    <div style="margin-top: 32px; background: #5457D6; color: #FAFAF8; border-radius: 10px; padding: 40px 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 36px 44px; align-items: center">
-      <div style="display: grid; gap: 16px">
+    <div style="margin-top: 32px; background: #5457D6; color: #FAFAF8; border-radius: 10px; padding: 40px 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px 44px; align-items: center">
+      <div style="display: grid; gap: 14px">
         <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #DBF78F">SOLUTION — WORKING INSIDE IT</div>
-        <p style="margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: -0.01em; text-wrap: pretty">Through discussion, I realized the underlying problem was not simply knowing when a customer had arrived. The client was trying to reduce long queues at the concession counter, a recurring operational issue in urban locations.</p>
-        <p style="margin: 0; font-size: 17px; line-height: 1.65; letter-spacing: -0.01em; text-wrap: pretty">The goal was not to reproduce the requested feature. It was to solve the operational problem behind it. Rather than having customers manually trigger preparation, I proposed a more efficient concession flow:</p>
-        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #DBF78F">TICKET → F&amp;B ORDER → QR CODE → QUEUE NUMBER → PICKUP</div>
-        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: rgba(250,250,248,0.75); text-wrap: pretty">Customers can see a QR code on their e-ticket. When they arrive, they scan the QR code to receive a queue number, which is displayed on the electronic board. They can then monitor the board and approach the counter when their number is ready. This shifted the interaction from "tell us when you arrive" to "give customers visibility into when their order is ready." It addressed the operational problem behind the request while reducing the risk of customers triggering preparation too early or accidentally.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; letter-spacing: -0.01em; text-wrap: pretty">Through discussion, I realized the underlying problem was not simply knowing when a customer had arrived. The client was trying to reduce long queues at the concession counter, a recurring operational issue in urban locations.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; letter-spacing: -0.01em; text-wrap: pretty">The goal was not to reproduce the requested feature. It was to solve the operational problem behind it. Rather than having customers manually trigger preparation, I proposed a more efficient concession flow:</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">Customers can see a QR code on their e-ticket. When they arrive, they scan the QR code to receive a queue number, which is displayed on the electronic board. They can then monitor the board and approach the counter when their number is ready. This shifted the interaction from "tell us when you arrive" to "give customers visibility into when their order is ready." It addressed the operational problem behind the request while reducing the risk of customers triggering preparation too early or accidentally.</p>
       </div>
       <div style="display: grid; gap: 14px; justify-items: center">
         <div style="width: 100%; max-width: 280px; box-sizing: border-box; background: #0E0E0E; border-radius: 46px; padding: 10px; box-shadow: 0 14px 32px rgba(0,0,0,0.4)">
           <div style="position: relative; border-radius: 37px; overflow: hidden; background: #F1F1EE; aspect-ratio: 9/19.5"><div class="tkf1" style="position: absolute; inset: 0; overflow: hidden"><img src="../uploads/pasted-1787160580197-0.png" alt="E-ticket with per-seat tickets and QR codes" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div class="tkf2" style="position: absolute; inset: 0; overflow: hidden"><img src="../uploads/pasted-1787160598243-0.png" alt="Add-ons tab with F&amp;B collection QR" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center"></div><div style="position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 64px; height: 19px; border-radius: 999px; background: #0E0E0E; pointer-events: none"></div><div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 88px; height: 4px; border-radius: 999px; background: rgba(14,14,14,0.3); pointer-events: none"></div></div>
         </div>
-        <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: rgba(255,255,255,0.85)">TICKETS → ADD-ONS</span>
+        <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: rgba(255,255,255,0.85); text-align: center">TICKET → F&amp;B ORDER → QR CODE → QUEUE NUMBER → PICKUP</span>
       </div>
     </div>
   </section>
